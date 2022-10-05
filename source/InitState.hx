@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxState;
+import flixel.FlxG;
 
 class InitState extends FlxState
 {
