@@ -19,20 +19,13 @@ using StringTools;
 
 class Main extends Sprite
 {
-        public static var initialState:Class<FlxState> = InitState;
 	public function new()
 	{
 		super();
 		
 		initCrashHandler();
 		
-		#if android
-		if (!Permissions.getGrantedPermissions().contains(Permissions.WRITE_EXTERNAL_STORAGE) || !Permissions.getGrantedPermissions().contains(Permissions.READ_EXTERNAL_STORAGE)) {
-            initialState = PermsState;
-        }
-		#end
-		
-		addChild(new FlxGame(0, 0, initialState, 1, 60, 60, true));
+		addChild(new FlxGame(0, 0, InitState, 1, 60, 60, true));
 	}
 	
 	/**
