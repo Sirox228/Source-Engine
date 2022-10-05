@@ -4,7 +4,7 @@ import flixel.FlxState;
 import flixel.FlxG;
 #if android
 import android.os.Build;
-import android.Permissions
+import android.Permissions;
 #end
 
 class InitState extends FlxState
