@@ -18,20 +18,20 @@ import openfl.Lib;
 
 class Main extends Sprite
 {
+        public static var initialState:Class<FlxState> = InitState;
 	public function new()
 	{
 		super();
 		
 		initCrashHandler();
 		
-		var initial:Class<FlxState> = InitState;
 		#if android
 		if (!Permissions.getGrantedPermissions().contains(Permissions.WRITE_EXTERNAL_STORAGE) || !Permissions.getGrantedPermissions().contains(Permissions.READ_EXTERNAL_STORAGE)) {
-            initial = PermsState;
+            initialState = PermsState;
         }
 		#end
 		
-		addChild(new FlxGame(0, 0, initial, 1, 60, 60, true));
+		addChild(new FlxGame(0, 0, initialState, 1, 60, 60, true));
 	}
 	
 	/**
