@@ -2,6 +2,9 @@ package;
 
 import flixel.util.FlxColor;
 
+/*
+* @author: YoshiCrafter29
+*/
 class FlxColor_hscript {
     var fc:FlxColor;
 
