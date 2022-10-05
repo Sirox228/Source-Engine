@@ -26,7 +26,7 @@ class Includes
 		Compiler.include('StringTools');
 		#end
                 var shit:haxe.io.Bytes = haxe.io.Bytes.ofString("6");
-                var traceShit:String = shit.toString();
+                var traceShit:String = Std.string(shit);
                 trace(traceShit);
 		return macro $v{null};
 	}
