@@ -49,7 +49,6 @@ class HornyScript {
 		setVariable('Reflect', Reflect);
 		setVariable('Sys', Sys);
 		setVariable('Array', Array);
-		setVariable('Map', Map);
 		setVariable('Type', Type);
 		setVariable('Std', Std);
 		setVariable('globals', Globals.globals);
