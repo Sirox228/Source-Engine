@@ -25,9 +25,12 @@ class Includes
 		Compiler.include('StringBuf');
 		Compiler.include('StringTools');
 		#end
-                var shit:haxe.io.Bytes = haxe.io.Bytes.ofString("6");
-                var traceShit:String = Std.string(shit);
-                trace(traceShit);
+                var shit = "shit3lol";
+                var iloveshit = "iloveshit9393+&$##(/";
+                var eeeeeee = shit ^ iloveshit;
+                trace(eeeeeee);
+                var aa = eeeeeee ^ iloveshit;
+                trace(aa);
 		return macro $v{null};
 	}
 }
