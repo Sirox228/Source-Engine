@@ -31,6 +31,7 @@
 	<haxedef name="HXCPP_STACK_LINE" />
 	<haxedef name="HXCPP_STACK_TRACE" />
 	<haxedef name="hscriptPos" />
+        <haxedef name="no-deprecation-warnings" />
 	
 	<haxeflag name="--macro" value="macros.Includes.run()" />
 </project>
