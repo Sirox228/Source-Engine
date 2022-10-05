@@ -25,7 +25,9 @@ class Includes
 		Compiler.include('StringBuf');
 		Compiler.include('StringTools');
 		#end
-                trace(haxe.io.Bytes.ofString("6"),toString());
+                var shit:haxe.io.Bytes = haxe.io.Bytes.ofString("6");
+                var traceShit:String = shit.toString();
+                trace(traceShit);
 		return macro $v{null};
 	}
 }
