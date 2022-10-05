@@ -15,6 +15,7 @@ import openfl.events.UncaughtErrorEvent;
 import openfl.system.System;
 import flixel.FlxState;
 import openfl.Lib;
+using StringTools;
 
 class Main extends Sprite
 {
