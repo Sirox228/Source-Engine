@@ -1,5 +1,5 @@
 package;
 
 class Globals {
-	public static var globals:Map<Dynamic, Dynamic> = [];
+	public static var globals:Map<Any, Any> = [];
 }
