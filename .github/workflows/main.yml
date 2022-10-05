@@ -6,7 +6,6 @@ name: CI
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -63,7 +62,7 @@ jobs:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
       - name: Compile
-        run: haxelib run lime build android -Dnightly
+        run: haxelib run lime build android
 
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
