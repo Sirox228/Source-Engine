@@ -15,8 +15,6 @@
 	<set name="BUILD_DIR" value="export/32bit" if="32bits" />
 
 	<source path="source" />
-	<assets path="game" unless="mobile" />
-	<assets path="game/fonts" embed='true'/>
 
 	<haxelib name="flixel" />
 	<haxelib name="extension-androidtools" if="android" />
@@ -26,6 +24,7 @@
         <haxelib name="linc_luajit" />
         <haxelib name="hxvm-luajit" />
 	<haxelib name="hscript" />
+        <haxelib name="hxCodec" />
 
 	<haxedef name="FLX_NO_DEBUG" unless="debug" />
 	<haxedef name="HXCPP_GC_BIG_BLOCKS" />
