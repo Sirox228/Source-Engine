@@ -17,6 +17,7 @@ class HornyScript extends FlxBasic {
 
 	public function new(path:String)
 	{
+                super();
 		code = sys.io.File.getContent(#if android Paths.gamePath() + #end path);
 		
 		hscript = new Interp();
