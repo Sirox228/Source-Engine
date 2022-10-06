@@ -27,7 +27,6 @@ class Includes
                 Compiler.include('hscript');
                 Compiler.include('cpp.RawPointer');
                 Compiler.include('cpp.Pointer');
-                Compiler.include('llua');
                 Compiler.include('vm');
 		#end
 		return macro $v{null};
