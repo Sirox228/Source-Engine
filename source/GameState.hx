@@ -1,16 +1,13 @@
 package;
 
 import flixel.FlxState;
-import flixel.util.FlxColor;
 
 class GameState extends FlxState {
 	public var battle:HornyScript;
 	public var system:HornyScript;
-        public var map:Map<String, Dynamic> = [];
 	
 	override public function create() {
 		super.create();
-                map.set('FlxColor', Type.getClass(FlxColor));
 		battle = new HornyScript("game/battle.hx");
 		battle.setVariable("this", this);
 		battle.executeFunc("create", []);
