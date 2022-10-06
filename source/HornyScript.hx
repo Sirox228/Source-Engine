@@ -3,7 +3,6 @@ package;
 import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
-import llua.State;
 using StringTools;
 
 /*
@@ -54,7 +53,6 @@ class HornyScript {
 		setVariable('Std', Std);
 		setVariable('globals', Globals.globals);
 		setVariable('FlxColor', FlxColor_hscript);
-                setVariable('StatePointer', StatePointer);
 		
 		try
 		{
