@@ -4,6 +4,7 @@ import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
 import flixel.FlxBasic;
+import llua.State;
 using StringTools;
 
 /*
@@ -61,6 +62,7 @@ class HornyScript extends FlxBasic {
 		setVariable('HSubState', HornySubState);
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
+                setVariable('StatePointer', StatePointer);
 		
 	}
 
