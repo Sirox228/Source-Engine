@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxState;
+import flixel.FlxBasic;
 
 class GameState extends FlxState {
 	public var script:HornyScript;
