@@ -14,6 +14,7 @@ class HornyState extends FlxSubState {
         script.setVariable("remove", function(obj:FlxBasic) {remove(obj);});
         script.setVariable("insert", function(i:Int, obj:FlxBasic) {insert(i, obj);});
         script.setVariable("substate", this);
+        script.run();
         script.executeFunc("new", args);
     }
 
