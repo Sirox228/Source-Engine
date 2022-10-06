@@ -6,7 +6,7 @@ import flixel.util.FlxColor;
 class GameState extends FlxState {
 	public var battle:HornyScript;
 	public var system:HornyScript;
-        public var map:Map<String, Any> = [];
+        public var map:Map<String, FlxColor> = [];
 	
 	override public function create() {
 		super.create();
