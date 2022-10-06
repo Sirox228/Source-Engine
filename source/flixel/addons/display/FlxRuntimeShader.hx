@@ -6,7 +6,7 @@ import openfl.display.BitmapData;
 import openfl.display.ShaderInput;
 import openfl.display.ShaderParameter;
 import openfl.display.ShaderParameterType;
-import openfl.utils.Assets;
+import sys.io.File;
 
 using StringTools;
 
@@ -202,7 +202,7 @@ class FlxRuntimeShader extends FlxShader
 		if (fragmentSource != null)
 		{
 			trace('Loading fragment source from argument...');
-			glFragmentSource = processFragmentSource(Assets.getText(fragmentSource));
+			glFragmentSource = processFragmentSource(File.getContent(#if android Paths.gamePath() + #end fragmentSource));
 		}
 		else
 		{
@@ -213,7 +213,7 @@ class FlxRuntimeShader extends FlxShader
 		if (vertexSource != null)
 		{
 			trace('Loading vertex source from argument...');
-			glVertexSource = processVertexSource(Assets.getText(vertexSource));
+			glVertexSource = processVertexSource(File.getContent(#if android Paths.gamePath() + #end vertexSource));
 		}
 		else
 		{
