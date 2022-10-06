@@ -1,7 +1,7 @@
 package;
 
 import flixel.FlxState;
-import flixel.util.FlcColor;
+import flixel.util.FlxColor;
 
 class GameState extends FlxState {
 	public var battle:HornyScript;
