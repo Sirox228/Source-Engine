@@ -7,6 +7,7 @@ class HornyClass {
     public dynamic function new(path:String, args:Array<Dynamic>) {
         script = new HornyScript(path);
 		script.setVariable("class", this);
+                script.run();
 		script.executeFunc("create", args);
     }
 
