@@ -2,4 +2,4 @@
 ---
 все текстуры предналежат создателю андертэйла, а именно белой собаке
 ---
-this is is *very* unfinished
+this is is **very** unfinished
