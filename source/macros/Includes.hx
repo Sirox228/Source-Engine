@@ -24,6 +24,8 @@ class Includes
 		Compiler.include('Lambda');
 		Compiler.include('StringBuf');
 		Compiler.include('StringTools');
+                Compiler.include('hscript');
+                Compiler.include('llua');
 		#end
 		return macro $v{null};
 	}
