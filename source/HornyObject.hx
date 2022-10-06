@@ -14,6 +14,7 @@ class HornyObject extends FlxSprite {
 		super(x, y);
 		script = new HornyScript("game/objects/" + objName + "/script.hx");
 		script.setVariable("object", this);
+                script.run();
 		script.executeFunc("new", [x, y]);
 		script.executeFunc("create", [x, y]);
 	}
