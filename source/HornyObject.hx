@@ -24,7 +24,7 @@ class HornyObject extends FlxSprite {
 	}
 	
 	public function updateOffset(animName:String, x:Float = 0, y:Float = 0) {
-		if (animOffsets.exists(animation.curAnim.name)) {
+		if (offsets.exists(animation.curAnim.name)) {
 		    offset.set(offsets.get(animation.curAnim.name)[0], offsets.get(animation.curAnim.name)[1]);
 		} else {
 			offset.set(0, 0);
