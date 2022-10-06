@@ -8,6 +8,7 @@ class HornyClass {
         script = new HornyScript(path);
 		script.setVariable("class", this);
                 script.run();
+                script.executeFunc("new", args);
 		script.executeFunc("create", args);
     }
 
