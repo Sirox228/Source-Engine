@@ -13,10 +13,11 @@ class HornyScript extends FlxBasic {
 	
 	public var hscript:Interp;
 	public var parser:Parser;
+        var code:String = '';
 
 	public function new(path:String)
 	{
-		var code:String = sys.io.File.getContent(#if android Paths.gamePath() + #end path);
+		code = sys.io.File.getContent(#if android Paths.gamePath() + #end path);
 		
 		hscript = new Interp();
 		
@@ -60,7 +61,11 @@ class HornyScript extends FlxBasic {
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
 		
-		try
+	}
+
+        public function run()
+        {
+                try
 		{
 			var ast:Any = parser.parseString(code);
 
@@ -70,7 +75,7 @@ class HornyScript extends FlxBasic {
 		{
 			Lib.application.window.alert(e.message, "HSCRIPT ERROR!1111");
 		}
-	}
+        }
 
 	public function setVariable(name:String, val:Dynamic)
 	{
