@@ -33,6 +33,8 @@
 	<haxedef name="HXCPP_STACK_TRACE" />
 	<haxedef name="hscriptPos" />
         <haxedef name="no-deprecation-warnings" />
+
+        <icon path="icon.png" />
 	
 	<haxeflag name="--macro" value="macros.Includes.run()" />
 </project>
