@@ -10,8 +10,7 @@ class GameState extends FlxState {
 	
 	override public function create() {
 		super.create();
-                var a:FlxColor;
-                map.set('FlxColor', Type.getClass(a));
+                map.set('FlxColor', Type.getClass(Type.resolveClass("flixel.util.FlxColor")));
 		battle = new HornyScript("game/battle.hx");
 		battle.setVariable("this", this);
 		battle.executeFunc("create", []);
