@@ -4,7 +4,7 @@ import flixel.FlxBasic;
 import flixel.FlxG;
 import flixel.FlxSubState;
 
-class HornyState extends FlxSubState {
+class HornySubState extends FlxSubState {
     public var script:HornyScript;
 
     public override function new(path:String, args:Array<Any>) {
