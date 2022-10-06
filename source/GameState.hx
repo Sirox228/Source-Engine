@@ -12,6 +12,7 @@ class GameState extends FlxState {
 		script.setVariable("add", function(obj:FlxBasic) {add(obj);});
         script.setVariable("remove", function(obj:FlxBasic) {remove(obj);});
         script.setVariable("insert", function(i:Int, obj:FlxBasic) {insert(i, obj);});
+        script.run();
         script.executeFunc("new");
 	}
 	
