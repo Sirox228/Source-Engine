@@ -3,12 +3,13 @@ package;
 import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
+import flixel.FlxBasic;
 using StringTools;
 
 /*
 * Based on Hscript api from fnf wednesdays infidelity by lunarcleint, crefots to him
 */
-class HornyScript {
+class HornyScript extends FlxBasic {
 	
 	public var hscript:Interp;
 	public var parser:Parser;
@@ -53,6 +54,11 @@ class HornyScript {
 		setVariable('Std', Std);
 		setVariable('globals', Globals.globals);
 		setVariable('FlxColor', FlxColor_hscript);
+		setVariable('HClass', HornyClass);
+		setVariable('HState', HornyState);
+		setVariable('HSubState', HornySubState);
+		setVariable('HObject', HornyObject);
+		setVariable('HScript', HornyScript);
 		
 		try
 		{
@@ -114,9 +120,10 @@ class HornyScript {
 		return null;
 	}
 
-	public function destroy()
+	override public function destroy()
 	{
 		hscript = null;
 		parser = null;
+		super.destroy();
 	}
 }

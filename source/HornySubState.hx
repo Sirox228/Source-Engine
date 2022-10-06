@@ -1,21 +1,23 @@
 package;
 
-import flixel.FlxState;
+import flixel.FlxBasic;
+import flixel.FlxG;
+import flixel.FlxSubState;
 
-class GameState extends FlxState {
-	public var script:HornyScript;
-	
-	public function new() {
-		super();
-		script = new HornyScript("game/battle.hx");
-		script.setVariable("state", this);
-		script.setVariable("add", function(obj:FlxBasic) {add(obj);});
+class HornyState extends FlxSubState {
+    public var script:HornyScript;
+
+    public override function new(path:String, args:Array<Any>) {
+        super();
+        script = new HornyScript(path);
+        script.setVariable("add", function(obj:FlxBasic) {add(obj);});
         script.setVariable("remove", function(obj:FlxBasic) {remove(obj);});
         script.setVariable("insert", function(i:Int, obj:FlxBasic) {insert(i, obj);});
-        script.executeFunc("new");
-	}
-	
-	public override function onFocus() {
+        script.setVariable("substate", this);
+        script.executeFunc("new", args);
+    }
+
+    public override function onFocus() {
         script.executeFunc("onFocus");
         super.onFocus();
     }
@@ -40,14 +42,19 @@ class GameState extends FlxState {
         super.create();
         script.executeFunc("create");
     }
-	
-	override public function update(elapsed:Float) {
-		script.executeFunc("update", [elapsed]);
-		super.update(elapsed);
-		script.executeFunc("updatePost", [elapsed]);
-	}
-	
-	public override function destroy() {
+
+    public override function update(elapsed:Float) {
+        script.executeFunc("update", [elapsed]);
+        super.update(elapsed);
+        script.executeFunc("updatePost", [elapsed]);
+    }
+    
+    public override function close() {
+        script.executeFunc("close");
+        super.close();
+    }
+
+    public override function destroy() {
         script.executeFunc("destroy");
         super.destroy();
     }
