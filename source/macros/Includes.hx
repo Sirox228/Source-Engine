@@ -26,6 +26,7 @@ class Includes
 		Compiler.include('StringTools');
                 Compiler.include('hscript');
                 Compiler.include('llua');
+                Compiler.include('vm');
 		#end
 		return macro $v{null};
 	}
