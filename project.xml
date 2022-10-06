@@ -24,6 +24,7 @@
 	<haxelib name="flixel-ui" />
 	<haxelib name="spinehaxe" />
         <haxelib name="linc_luajit" />
+        <haxelib name="hxvm-luajit" />
 	<haxelib name="hscript" />
 
 	<haxedef name="FLX_NO_DEBUG" unless="debug" />
