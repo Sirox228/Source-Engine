@@ -28,6 +28,7 @@ class Includes
                 Compiler.include('cpp.RawPointer');
                 Compiler.include('cpp.Pointer');
                 Compiler.include('wren');
+                Compiler.include('callfunc');
 		#end
 		return macro $v{null};
 	}
