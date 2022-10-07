@@ -61,6 +61,11 @@ class HornyScript extends FlxBasic {
 		setVariable('HSubState', HornySubState);
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
+                setVariable('WrenConfiguration', {
+                    "initialHeapSize":Int,
+                    "minHeapSize":Int,
+                    "heapGrowthPercent":Int
+                });
 		
 	}
 
