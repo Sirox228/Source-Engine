@@ -27,6 +27,7 @@ class Includes
                 Compiler.include('hscript');
                 Compiler.include('cpp.RawPointer');
                 Compiler.include('cpp.Pointer');
+                Compiler.include('wren');
 		#end
 		return macro $v{null};
 	}
