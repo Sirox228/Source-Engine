@@ -10,9 +10,9 @@ class HornyObject extends FlxSprite {
 	public var offsets:Map<String, Array<Float>> = [];
 	public var script:HornyScript;
 	
-	public function new(x:Float = 0, y:Float = 0, objName:String) {
+	public function new(x:Float = 0, y:Float = 0, objsctipt:String) {
 		super(x, y);
-		script = new HornyScript("game/objects/" + objName + "/script.hx");
+		script = new HornyScript(objscript);
 		script.setVariable("object", this);
                 script.run();
 		script.executeFunc("new", [x, y]);
