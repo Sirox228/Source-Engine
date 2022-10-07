@@ -8,7 +8,7 @@ class GameState extends FlxState {
 	
 	public function new() {
 		super();
-		script = new HornyScript("game/battle.hx");
+		script = new HornyScript("game/main.hx");
 		script.setVariable("state", this);
 		script.setVariable("add", function(obj:FlxBasic) {add(obj);});
         script.setVariable("remove", function(obj:FlxBasic) {remove(obj);});
