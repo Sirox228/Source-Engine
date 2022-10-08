@@ -75,9 +75,6 @@ class HornyScript extends FlxBasic {
 		setVariable('HSubState', HornySubState);
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
-                setVariable('Lua_Debug', Lua_Debug);
-                var c:StatePointer = StatePointer;
-                setVariable('StatePointer', Type.getClass(c));
 
                 if (luasvmxd != null || linclua != null || videoshsjne != null) {
                         trace("aaaaaa");
