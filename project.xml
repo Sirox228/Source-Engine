@@ -25,7 +25,6 @@
         <haxelib name="hxvm-luajit" />
 	<haxelib name="hscript" />
         <haxelib name="hxCodec" />
-        <haxelib name="callfunc" />
 
 	<haxedef name="FLX_NO_DEBUG" unless="debug" />
 	<haxedef name="HXCPP_GC_BIG_BLOCKS" />
