@@ -17,15 +17,12 @@ class HornyScript extends FlxBasic {
 	public var hscript:Interp;
 	public var parser:Parser;
         var code:String = '';
-        var vm:LuaVM;
-        var llua:LuaL;
+        var luasvmxd:LuaVM;
+        var linclua:LuaL;
 
 	public function new(path:String)
 	{
                 super();
-                if (vm != null || llua != null) {
-                        trace("aaaaaa");
-                }
 		code = sys.io.File.getContent(#if android Paths.gamePath() + #end path);
 		
 		hscript = new Interp();
@@ -76,6 +73,10 @@ class HornyScript extends FlxBasic {
 		setVariable('HSubState', HornySubState);
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
+
+                if (luasvmxd != null || linclua != null) {
+                        trace("aaaaaa");
+                }
 		
 	}
 
