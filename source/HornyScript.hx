@@ -4,6 +4,8 @@ import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
 import flixel.FlxBasic;
+import cpp.Pointer;
+import cpp.RawPointer;
 using StringTools;
 
 /*
@@ -61,11 +63,8 @@ class HornyScript extends FlxBasic {
 		setVariable('HSubState', HornySubState);
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
-                setVariable('WrenConfiguration', {
-                    "initialHeapSize":Int,
-                    "minHeapSize":Int,
-                    "heapGrowthPercent":Int
-                });
+                setVariable('Pointer', Pointer);
+                setVariable('RawPointer', RawPointer);
 		
 	}
 
