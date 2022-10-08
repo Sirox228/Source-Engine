@@ -146,7 +146,7 @@ function loadGraphic(graphic:FlxGraphicAsset, animated:Bool = false, width:Int =
 function getScreenBounds(?newRect:FlxRect, ?camera:FlxCamera) {}
 ```
 
-2. HScript class
+4. HScript class
 
 available functions and variable for script you're connecting to that HClass:
 
@@ -178,5 +178,79 @@ function executeFunc(funcName:String, ?args:Array<Any>) {}
 ```
 - function that executes a function from script slecified by ```funcName``` with ```args``` arguments
 
+5. HState class
+***!important!*** this class is an extend of flixel.FlxState, so it's a child class of FlxState,
+that means, that you can do same things as with FlxState with HState.
 
+available functions and variable for script you're connecting to that HClass:
 
+```haxe
+var state:HState = new HState("path/to/hscript/file.hx", [arguements, for, functions]);
+```
+
+1. ```state``` - current instance of the HState object that launched this hscript file
+
+2. 
+```haxe
+function insert(i:Int, obj:FlxBasic) {}
+```
+- function that adds an object ```obj``` to layer ```i```
+
+3.
+```haxe
+function destroy() {}
+```
+- function that is runned when object is going to be destroyed
+
+4. 
+```haxe
+function new(specify here all arguments, you wrote after path in new HState) {}
+```
+- function that is runned when creating HState object
+
+5.
+```haxe
+function create() {}
+```
+- function that is runned instantly after call of the ```new``` function is completed
+
+6.
+```haxe
+function update(elapsed) {}
+```
+- function that is runned each frame
+
+7.
+```haxe
+function updatePost(elapsed) {}
+```
+- same as ```update``` function, but this one runs after ```update``` and ```super``` call in the source code
+
+other functions that don't need explanation:
+
+```haxe
+function add(obj:FlxBasic) {}
+```
+
+```haxe
+function remove(obj:FlxBasic) {}
+```
+
+```haxe
+function onFocus() {}
+```
+
+```haxe
+function onFocusLost() {}
+```
+
+```haxe
+function onResize(width:Int, height:Int) {}
+```
+
+```haxe
+function draw() {}
+```
+
+5. HSubState class
+literally same as HState, but this one is child class of flixel.FlxSubState
