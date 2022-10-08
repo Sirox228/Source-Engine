@@ -2,6 +2,8 @@
 <project xmlns="http://lime.software/project/1.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://lime.software/project/1.0.2 http://lime.software/xsd/project-1.0.2.xsd">
 
+        <haxeflag name="-dce no" />
+
 	<app title="Source Engine" file="Source-Engine" packageName="com.sirox.sourceengine" package="com.sirox.soirceengine" main="Main" version="1.0" company="sirox" />
 	<app preloader="flixel.system.FlxPreloader" />
 	<set name="SWF_VERSION" value="11.8" />
@@ -38,5 +40,4 @@
         <icon path="icon.png" />
 	
 	<haxeflag name="--macro" value="macros.Includes.run()" />
-        <haxeflag name="-dce no" />
 </project>
