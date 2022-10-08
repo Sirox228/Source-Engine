@@ -49,11 +49,18 @@ class HornyScript extends FlxBasic {
 					setVariable(splitClassName[splitClassName.length - 1], daClass);
 			}
 		});
+		setVariable('Date', Date);
+		setVariable('DateTools', DateTools);
+		setVariable('EReg', EReg);
+		setVariable('Lambda', Lambda);
+		setVariable('Math', Math);
 		setVariable('Reflect', Reflect);
-		setVariable('Sys', Sys);
-		setVariable('Array', Array);
-		setVariable('Type', Type);
 		setVariable('Std', Std);
+		setVariable('StringBuf', StringBuf);
+		setVariable('StringTools', StringTools);
+		setVariable('Sys', Sys);
+		setVariable('Type', Type);
+		setVariable('Xml', Xml);
 		setVariable('globals', Globals.globals);
 		setVariable('FlxColor', FlxColor_hscript);
 		setVariable('HClass', HornyClass);
