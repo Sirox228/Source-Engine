@@ -36,7 +36,9 @@ all of those are already in hscript and no need to import
 
 available functions and variable for script you're connecting to that HClass:
 
-```haxe var class:HClass = new HClass("path/to/hscript/file.hx", [arguements, for, functions]);```
+```haxe
+var class:HClass = new HClass("path/to/hscript/file.hx", [arguements, for, functions]);
+```
 
 1. ```class``` - current instance of the HClass object that launched this hscript file
 
