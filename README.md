@@ -29,13 +29,9 @@ A game engine, written on haxe that uses hscript as the base, the engine is call
 
 # Engine's hscript basic functions
 all of those are already in hscript and no need to import
-1. ```haxe
-import('package.class'); // you need to write package and class/enum name of the class/enum you want to import, typedef is unsupported.
-```
+1. ```haxe import('package.class'); // you need to write package and class/enum name of the class/enum you want to import, typedef is unsupported.```
 2. HClass class
-```haxe
-var class:HClass = new HClass("path/to/hscript/file.hx", [arguements, for, functions]);
-```
+```haxe var class:HClass = new HClass("path/to/hscript/file.hx", [arguements, for, functions]);```
 available functions and variable for script you're connecting to that HClass:
 1. ```class``` - current instance of the HClass object that launched this hscript file
 2. ```function new(specify here all arguments, you wrote after path in new HClass) {}``` - function that is runned when creating HClass object
