@@ -28,6 +28,8 @@ A game engine, written on haxe that uses hscript as the base, the engine is call
 5. flixel, flixel-addons and flixel-ui, you can use flixel in it as you want
 
 # Engine's hscript basic functions
+```script``` - current instance of the HScript class that runs this file
+
 all of those are already in hscript and no need to import
 
 1.
@@ -143,4 +145,38 @@ function loadGraphic(graphic:FlxGraphicAsset, animated:Bool = false, width:Int =
 ```haxe
 function getScreenBounds(?newRect:FlxRect, ?camera:FlxCamera) {}
 ```
+
+2. HScript class
+
+available functions and variable for script you're connecting to that HClass:
+
+```haxe
+var script:HScript = new HScript("path/to/hscript/file.hx");
+```
+
+1. 
+```haxe
+function run() {}
+```
+- function that runs and parses the script, you can't set variables to script after calling this
+
+2. 
+```haxe
+function setVariable(name:String, val:Dynamic) {}
+```
+- function that sets ```val``` class/variable as ```name``` to script
+
+3. 
+```haxe
+function getVariable(name:String) {}
+```
+- function that returns a variable from script, specified by ```name```
+
+4. 
+```haxe
+function executeFunc(funcName:String, ?args:Array<Any>) {}
+```
+- function that executes a function from script slecified by ```funcName``` with ```args``` arguments
+
+
 
