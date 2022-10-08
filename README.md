@@ -12,6 +12,7 @@ A game engine, written on haxe that uses hscript as the base, the engine is call
 3.Open the engine, no errors would appear now, congratulations, you installed the engine
 
 # Windows
+
 1.Inside folder with .exe file of the game, create ```current.txt``` file and write in it your game's name, then, create a folder, with the same name, as you wrote in ```current.txt```, inside that folder, create file called ```main.hx```
 ---
 ## Usage of the Engine
