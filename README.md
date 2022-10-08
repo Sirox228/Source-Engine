@@ -112,7 +112,7 @@ function destroy() {}
 ```
 - function that is runned when object is going to be destroyed
 
-other functions that don't need explanation
+other functions that don't need explanation:
 
 ```haxe
 function draw() {}
