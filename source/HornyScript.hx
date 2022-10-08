@@ -5,7 +5,7 @@ import hscript.Parser;
 import openfl.Lib;
 import flixel.FlxBasic;
 import vm.lua.LuaVM;
-import llua.LuaL;
+import llua.State;
 import VideoHandler;
 using StringTools;
 
@@ -17,9 +17,9 @@ class HornyScript extends FlxBasic {
 	public var hscript:Interp;
 	public var parser:Parser;
         var code:String = '';
-        var luasvmxd:LuaVM;
-        var linclua:LuaL;
-        var videoshsjne:VideoHandler;
+        var luasvmxd:LuaVM = null;
+        var linclua:State = null;
+        var videoshsjne:VideoHandler = null;
 
 	public function new(path:String)
 	{
