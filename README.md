@@ -48,12 +48,14 @@ var class:HClass = new HClass("path/to/hscript/file.hx", [arguements, for, funct
 2. 
 ```haxe
 function new(specify here all arguments, you wrote after path in new HClass) {}
-``` - function that is runned when creating HClass object
+```
+- function that is runned when creating HClass object
 
 3. 
 ```haxe
 function create(specify here all arguments, you wrote after path in new HClass) {}
-``` - function that is runned instantly after call of the ```new``` function is completed
+```
+- function that is runned instantly after call of the ```new``` function is completed
 
 3. HObject class 
 !important! this class is an extend of flixel.FlxSprite, so it's a child class of FlxSprite,
@@ -71,39 +73,47 @@ var object:HObject = new HObject(x, y, "path/to/hscript/file.hx");
 2. 
 ```haxe
 function new(x, y) {}
-``` - function that is runned when creating HClass object
+```
+- function that is runned when creating HClass object
 
 3.
 ```haxe
 function create(x, y) {}
-``` - function that is runned instantly after call of the ```new``` function is completed
+```
+- function that is runned instantly after call of the ```new``` function is completed
 
 4.
 ```haxe
 function update(elapsed) {}
-``` - function that is runned each frame
+```
+- function that is runned each frame
 
 5. ```haxe
 function updatePost(elapsed) {}
-``` - same as ```update``` function, but this one runs after ```update``` and ```super``` call in the source code
+```
+- same as ```update``` function, but this one runs after ```update``` and ```super``` call in the source code
 
 6. ```haxe
 setOffset(animName, x, y)
-``` - function that sets the offset for animation of the object into an array
+```
+- function that sets the offset for animation of the object into an array
 
 7. ```haxe
 updateOffset()
-``` - function that applying offsets that are set for current animation, if no offsets set to animation, offset is set to x - 0, y - 0
+```
+- function that applying offsets that are set for current animation, if no offsets set to animation, offset is set to x - 0, y - 0
 
-4. ```haxe
+8. ```haxe
 function destroy() {}
-``` - function that is runned when object is going to be destroyed
+```
+- function that is runned when object is going to be destroyed
 
 other functions that don't need explanation
 
 ```haxe
 function draw() {}
-``` - should ```return true;``` to call ```super``` and ```return false;``` to not call ```super```
+```
+- should ```return true;``` to call ```super``` and ```return false;``` to not call ```super```
 
 ```haxe
 function getGraphicMidpoint(?point:FlxPoint) {}
@@ -123,7 +133,8 @@ function pixelsOverlapPoint(point:FlxPoint, Mask:Int = 0xFF, ?Camera:FlxCamera) 
 
 ```haxe
 function loadGraphic(graphic:FlxGraphicAsset, animated:Bool = false, width:Int = 0, height:Int = 0, unique:Bool = false, ?Key:String) {}
-```  - should ```return true;``` to call ```super``` and ```return false;``` to not call ```super```
+``` 
+- should ```return true;``` to call ```super``` and ```return false;``` to not call ```super```
 
 ```haxe
 function getScreenBounds(?newRect:FlxRect, ?camera:FlxCamera) {}
