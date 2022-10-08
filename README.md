@@ -88,22 +88,26 @@ function update(elapsed) {}
 ```
 - function that is runned each frame
 
-5. ```haxe
+5.
+```haxe
 function updatePost(elapsed) {}
 ```
 - same as ```update``` function, but this one runs after ```update``` and ```super``` call in the source code
 
-6. ```haxe
+6.
+```haxe
 setOffset(animName, x, y)
 ```
 - function that sets the offset for animation of the object into an array
 
-7. ```haxe
+7.
+```haxe
 updateOffset()
 ```
 - function that applying offsets that are set for current animation, if no offsets set to animation, offset is set to x - 0, y - 0
 
-8. ```haxe
+8.
+```haxe
 function destroy() {}
 ```
 - function that is runned when object is going to be destroyed
