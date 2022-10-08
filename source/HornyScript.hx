@@ -19,6 +19,7 @@ class HornyScript extends FlxBasic {
         var code:String = '';
         var luasvmxd:LuaVM;
         var linclua:LuaL;
+        var videoshsjne:VideoHandler;
 
 	public function new(path:String)
 	{
@@ -74,7 +75,7 @@ class HornyScript extends FlxBasic {
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
 
-                if (luasvmxd != null || linclua != null) {
+                if (luasvmxd != null || linclua != null || videoshsjne != null) {
                         trace("aaaaaa");
                 }
 		
