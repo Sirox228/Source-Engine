@@ -4,6 +4,8 @@ import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
 import flixel.FlxBasic;
+import vm.lua.LuaVM;
+import llua.LuaL;
 using StringTools;
 
 /*
