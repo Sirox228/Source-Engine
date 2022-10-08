@@ -1,7 +1,7 @@
 ## Source Engine
 ![wut](https://raw.githubusercontent.com/Sirox228/Source-Engine/master/icon.png)
 ---
-A game engine, written on haxe that uses hscript as the base, the engine is called 'source' because whole game source code is written in hscript file that is not part of the source code, so this engine allows you to code any game want without compiling source code.
+A game engine, written on haxe that uses hscript as the base, the engine is called 'source' because whole game code is written in hscript file that is not part of the source code, so this engine allows you to code any game want without compiling source code.
 ---
 ## Installation
 # Android
