@@ -254,3 +254,12 @@ function draw() {}
 
 5. HSubState class
 literally same as HState, but this one is child class of flixel.FlxSubState
+
+1. ```substate``` - current instance of the HSubState object that launched this hscript file
+
+2.
+```haxe
+function close() {}
+```
+- function that is runned when substate is closing
+
