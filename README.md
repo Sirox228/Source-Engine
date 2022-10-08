@@ -58,7 +58,7 @@ function create(specify here all arguments, you wrote after path in new HClass) 
 - function that is runned instantly after call of the ```new``` function is completed
 
 3. HObject class 
-!important! this class is an extend of flixel.FlxSprite, so it's a child class of FlxSprite,
+***!important!*** this class is an extend of flixel.FlxSprite, so it's a child class of FlxSprite,
 that means, that you can do same things as with FlxSprite with HObject.
 (for example, set the frames for the sprite: ```object.frames = FlxAtlasFrames....```)
 
