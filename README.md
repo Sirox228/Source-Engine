@@ -29,7 +29,7 @@ A game engine, written on haxe that uses hscript as the base, the engine is call
 
 # Engine's hscript basic functions
 all of those are already in hscript and no need to import
-1. ```haxe 
+1. ```haxe
 import('package.class'); // you need to write package and class/enum name of the class/enum you want to import, typedef is unsupported.
 ```
 2. HClass class
