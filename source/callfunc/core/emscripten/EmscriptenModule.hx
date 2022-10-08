@@ -13,9 +13,9 @@ import js.lib.Uint8Array;
 #else
 import haxe.io.Float32Array;
 import haxe.io.Int32Array;
-import haxe.io.Uint16Array;
-import haxe.io.Uint32Array;
-import haxe.io.Uint8Array;
+import haxe.io.UInt16Array;
+import haxe.io.UInt32Array;
+import haxe.io.UInt8Array;
 #end
 
 extern class EmscriptenModule {
@@ -27,9 +27,15 @@ extern class EmscriptenModule {
     public var HEAP16:Array<Int>;
     #end
     public var HEAP32:Int32Array;
+    #if js
     public var HEAPU8:Uint8Array;
     public var HEAPU16:Uint16Array;
     public var HEAPU32:Uint32Array;
+    #else
+    public var HEAPU8:UInt8Array;
+    public var HEAPU16:UInt16Array;
+    public var HEAPU32:UInt32Array;
+    #end
     public var HEAPF32:Float32Array;
     public var HEAPF64:Float64Array;
 
