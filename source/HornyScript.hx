@@ -4,10 +4,9 @@ import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
 import flixel.FlxBasic;
-import vm.lua.LuaVM;
-import llua.State;
-import llua.Lua;
-import VideoHandler;
+import llua.*
+import vm.lua.*;
+imoort vlc.VLCBitmap;
 using StringTools;
 
 /*
@@ -18,9 +17,6 @@ class HornyScript extends FlxBasic {
 	public var hscript:Interp;
 	public var parser:Parser;
         var code:String = '';
-        var luasvmxd:LuaVM = null;
-        var linclua:State = null;
-        var videoshsjne:VideoHandler = null;
 
 	public function new(path:String)
 	{
@@ -75,11 +71,34 @@ class HornyScript extends FlxBasic {
 		setVariable('HSubState', HornySubState);
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
-
-                if (luasvmxd != null || linclua != null || videoshsjne != null) {
-                        trace("aaaaaa");
-                }
-		
+                // LUA SHIT
+                setVariable('LuaL_Buffer', LuaL_Buffer);
+                setVariable('Lua_BufferRef', BufferRef);
+                setVariable('Lua_Buffer', Buffer);
+                setVariable('Lua_Convert', Convert);
+                setVariable('Lua_Anon', Anon);
+		setVariable('Lua', Lua);
+                setVariable('Lua_helper', Lua_helper);
+                setVariable('Lua_Debug', {
+	                @:optional var event:Int;
+	                @:optional var name:String;             // (n)
+	                @:optional var namewhat:String;         // (n) `global', `local', `field', `method'
+	                @:optional var what:String;             // (S) `Lua', `C', `main', `tail'
+	                @:optional var source:String;           // (S)
+	                @:optional var currentline:Int;         // (l)
+	                @:optional var nups:Int;                // (u) number of upvalues
+	                @:optional var linedefined:Int;         // (S)
+	                @:optional var lastlinedefined:Int;     // (S)
+	                @:optional var short_src:Array<String>; // (S)
+	                @:optional var i_ci:Int;       // private
+                });
+                setVariable('LuaJIT', LuaJIT);
+                setVariable('LuaL', LuaL);
+                setVariable('LuaOpen', LuaOpen);
+                setVariable('Lua_StateRef', State);
+                setVariable('Lua_State', Lua_State);
+                setVariable('LuaException', LuaException);
+                setVariable('LuaVM', LuaVM);
 	}
 
         public function run()
