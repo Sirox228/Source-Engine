@@ -78,13 +78,6 @@ class HornyScript extends FlxBasic {
 		setVariable('HSubState', HornySubState);
 		setVariable('HObject', HornyObject);
 		setVariable('HScript', HornyScript);
-                // LUA SHIT
-                setVariable('LuaL_Buffer', LuaL_Buffer);
-                setVariable('Lua_BufferRef', BufferRef);
-                setVariable('Lua_Buffer', Buffer);
-                setVariable('Lua_Convert', Convert);
-                setVariable('Lua_Anon', Anon);
-		setVariable('Lua', Lua);
                 setVariable('Lua_helper', Lua_helper);
                 setVariable('Lua_Debug', {
 	                "event":Int,
@@ -99,18 +92,11 @@ class HornyScript extends FlxBasic {
 	                "short_src":Array, // (S)
 	                "i_ci":Int       // private
                 });
-                setVariable('LuaJIT', LuaJIT);
-                setVariable('LuaL', LuaL);
-                setVariable('LuaOpen', LuaOpen);
-                setVariable('Lua_StateRef', State);
-                setVariable('Lua_State', Lua_State);
-                setVariable('LuaException', LuaException);
                 setVariable('LuaVM', LuaVM);
                 // vlc shit
                 setVariable('VLCBitmap', VLCBitmap);
                 setVariable('VideoHandler', VideoHandler);
                 setVariable('VideoSprite', VideoSprite);
-                setVariable('LibVLC', LibVLC);
 	}
 
         public function run()
