@@ -4,8 +4,14 @@ import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
 import flixel.FlxBasic;
-import llua.*;
-import vm.lua.*;
+import llua.Buffer;
+import llua.Convert;
+import llua.Lua;
+import llua.LuaJIT;
+import llua.LuaL;
+import llua.LuaOpen;
+import llua.State;
+import vm.lua.LuaVM;
 import vlc.VLCBitmap;
 import vlc.LibVLC;
 using StringTools;
@@ -81,17 +87,17 @@ class HornyScript extends FlxBasic {
 		setVariable('Lua', Lua);
                 setVariable('Lua_helper', Lua_helper);
                 setVariable('Lua_Debug', {
-	                @:optional var event:Int;
-	                @:optional var name:String;             // (n)
-	                @:optional var namewhat:String;         // (n) `global', `local', `field', `method'
-	                @:optional var what:String;             // (S) `Lua', `C', `main', `tail'
-	                @:optional var source:String;           // (S)
-	                @:optional var currentline:Int;         // (l)
-	                @:optional var nups:Int;                // (u) number of upvalues
-	                @:optional var linedefined:Int;         // (S)
-	                @:optional var lastlinedefined:Int;     // (S)
-	                @:optional var short_src:Array<String>; // (S)
-	                @:optional var i_ci:Int;       // private
+	                "event":Int;
+	                "name":String;             // (n)
+	                "namewhat":String;         // (n) `global', `local', `field', `method'
+	                "what":String;             // (S) `Lua', `C', `main', `tail'
+	                "source":String;           // (S)
+	                "currentline":Int;         // (l)
+	                "nups":Int;                // (u) number of upvalues
+	                "linedefined":Int;         // (S)
+	                "lastlinedefined":Int;     // (S)
+	                "short_src":Array<String>; // (S)
+	                "i_ci":Int;       // private
                 });
                 setVariable('LuaJIT', LuaJIT);
                 setVariable('LuaL', LuaL);
