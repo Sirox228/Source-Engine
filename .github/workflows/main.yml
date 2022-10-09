@@ -43,7 +43,7 @@ jobs:
           haxelib --quiet --never run lime setup
           haxelib --quiet install flixel-ui
           haxelib --quiet install flixel-addons
-          haxelib --quiet install hscript
+          haxelib --quiet git hscript https://github.com/Sirox228/hscript-test
           haxelib --quiet install hxcpp-debug-server
           haxelib --quiet install spinehaxe
           haxelib --quiet git extension-androidtools https://github.com/MAJigsaw77/extension-androidtools.git
