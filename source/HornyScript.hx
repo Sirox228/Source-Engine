@@ -6,7 +6,8 @@ import openfl.Lib;
 import flixel.FlxBasic;
 import llua.*
 import vm.lua.*;
-imoort vlc.VLCBitmap;
+import vlc.VLCBitmap;
+import vlc.LibVLC;
 using StringTools;
 
 /*
@@ -99,6 +100,11 @@ class HornyScript extends FlxBasic {
                 setVariable('Lua_State', Lua_State);
                 setVariable('LuaException', LuaException);
                 setVariable('LuaVM', LuaVM);
+                // vlc shit
+                setVariable('VLCBitmap', VLCBitmap);
+                setVariable('VideoHandler', VideoHandler);
+                setVariable('VideoSprite', VideoSprite);
+                setVariable('LibVLC', LibVLC);
 	}
 
         public function run()
