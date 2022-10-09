@@ -87,17 +87,17 @@ class HornyScript extends FlxBasic {
 		setVariable('Lua', Lua);
                 setVariable('Lua_helper', Lua_helper);
                 setVariable('Lua_Debug', {
-	                "event":Int;
-	                "name":String;             // (n)
-	                "namewhat":String;         // (n) `global', `local', `field', `method'
-	                "what":String;             // (S) `Lua', `C', `main', `tail'
-	                "source":String;           // (S)
-	                "currentline":Int;         // (l)
-	                "nups":Int;                // (u) number of upvalues
-	                "linedefined":Int;         // (S)
-	                "lastlinedefined":Int;     // (S)
-	                "short_src":Array<String>; // (S)
-	                "i_ci":Int;       // private
+	                "event":Int,
+	                "name":String,             // (n)
+	                "namewhat":String,         // (n) `global', `local', `field', `method'
+	                "what":String,             // (S) `Lua', `C', `main', `tail'
+	                "source":String,           // (S)
+	                "currentline":Int,         // (l)
+	                "nups":Int,                // (u) number of upvalues
+	                "linedefined":Int,         // (S)
+	                "lastlinedefined":Int,     // (S)
+	                "short_src":Array<String>, // (S)
+	                "i_ci":Int       // private
                 });
                 setVariable('LuaJIT', LuaJIT);
                 setVariable('LuaL', LuaL);
