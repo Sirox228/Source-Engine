@@ -4,7 +4,7 @@ import hscript.Interp;
 import hscript.Parser;
 import openfl.Lib;
 import flixel.FlxBasic;
-import llua.*
+import llua.*;
 import vm.lua.*;
 import vlc.VLCBitmap;
 import vlc.LibVLC;
