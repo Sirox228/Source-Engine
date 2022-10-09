@@ -96,7 +96,7 @@ class HornyScript extends FlxBasic {
 	                "nups":Int,                // (u) number of upvalues
 	                "linedefined":Int,         // (S)
 	                "lastlinedefined":Int,     // (S)
-	                "short_src":Array<String>, // (S)
+	                "short_src":Array, // (S)
 	                "i_ci":Int       // private
                 });
                 setVariable('LuaJIT', LuaJIT);
