@@ -16,7 +16,7 @@ class HornyClass {
         script.setVariable(name, val);
     }
 
-    public function get(name:String) {
+    public function get(name:String):Dynamic {
         return script.getVariable(name);
     }
 
