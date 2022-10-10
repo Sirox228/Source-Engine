@@ -20,7 +20,7 @@ class HornyClass {
         return script.getVariable(name);
     }
 
-    public function call(name:String, args:Array<Any>):Any {
+    public function call(name:String, args:Array<Any>):Dynamic {
         return script.executeFunc(name, args);
     }
 }
