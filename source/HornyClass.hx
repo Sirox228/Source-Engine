@@ -19,4 +19,8 @@ class HornyClass {
     public function get(name:String) {
         return script.getVariable(name);
     }
+
+    public function call(name:String, args:Array<Any>):Any {
+        return script.executeFunc(name, args);
+    }
 }
