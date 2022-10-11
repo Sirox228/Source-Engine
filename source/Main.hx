@@ -25,7 +25,7 @@ class Main extends Sprite
 		
 		initCrashHandler();
 		
-		addChild(new FlxGame(0, 0, InitState, 1, 60, 60, true));
+		addChild(new FlxGame(1280, 720, InitState, 1, 60, 60, true));
 	}
 	
 	/**
