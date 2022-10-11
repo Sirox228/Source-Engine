@@ -71,7 +71,7 @@ class HornyScript extends FlxBasic {
 		setVariable('Sys', Sys);
 		setVariable('Type', Type);
 		setVariable('Xml', Xml);
-		setVariable('globals', Globals);
+		setVariable('Globals', Globals);
 		setVariable('FlxColor', FlxColor_hscript);
 		setVariable('HClass', HornyClass);
 		setVariable('HState', HornyState);
