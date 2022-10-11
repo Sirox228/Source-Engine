@@ -19,29 +19,14 @@ using StringTools;
 
 class Main extends Sprite
 {
-        var gameWidth:Int = 1280;
-	var gameHeight:Int = 720;
-	var zoom:Float = -1;
 
 	public function new()
 	{
 		super();
 		
 		initCrashHandler();
-
-                var stageWidth:Int = Lib.current.stage.stageWidth;
-		var stageHeight:Int = Lib.current.stage.stageHeight;
-
-		if (zoom == -1)
-		{
-			var ratioX:Float = stageWidth / gameWidth;
-			var ratioY:Float = stageHeight / gameHeight;
-			zoom = Math.min(ratioX, ratioY);
-			gameWidth = Math.ceil(stageWidth / zoom);
-			gameHeight = Math.ceil(stageHeight / zoom);
-		}
 		
-		addChild(new FlxGame(gameWidth, gameHeight, InitState, zoom, 60, 60, true, false));
+		addChild(new FlxGame(1280, 720, InitState, 1, 60, 60, true, false));
 	}
 	
 	/**
