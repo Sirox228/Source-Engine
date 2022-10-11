@@ -79,4 +79,16 @@ class HornyObject extends FlxSprite {
 		super.update(elapsed);
 		script.executeFunc("updatePost", [elapsed]);
 	}
+
+    public function set(name:String, val:Dynamic) {
+        script.setVariable(name, val);
+    }
+
+    public function get(name:String):Dynamic {
+        return script.getVariable(name);
+    }
+
+    public function call(name:String, args:Array<Any>):Dynamic {
+        return script.executeFunc(name, args);
+    }
 }
