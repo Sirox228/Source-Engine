@@ -17,7 +17,7 @@ import vlc.LibVLC;
 using StringTools;
 
 /*
-* Based on Hscript api from fnf wednesdays infidelity by lunarcleint, crefots to him
+* Based on Hscript api from fnf wednesdays infidelity by lunarcleint, credits to him
 */
 class HornyScript extends FlxBasic {
 	
