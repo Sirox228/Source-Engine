@@ -29,6 +29,7 @@ class Includes
                 Compiler.include('cpp.Pointer');
                 /*Compiler.include('vm');
                 Compiler.include('llua');*/
+                Compiler.include('away3d');
 		#end
 		return macro $v{null};
 	}
