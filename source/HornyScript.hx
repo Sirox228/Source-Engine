@@ -97,6 +97,7 @@ class HornyScript extends FlxBasic {
                 setVariable('VLCBitmap', VLCBitmap);
                 setVariable('VideoHandler', VideoHandler);
                 setVariable('VideoSprite', VideoSprite);
+                setVariable('Pointer', cpp.Pointer);
 	}
 
         public function run()
